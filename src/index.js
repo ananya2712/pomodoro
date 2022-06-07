@@ -7,6 +7,6 @@ import SettingsContextProvider from './context/SettingsContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <SettingsContextProvider>
-    <App />
+    <App/>
   </SettingsContextProvider>
 );

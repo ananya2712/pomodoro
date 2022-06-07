@@ -2,14 +2,15 @@ import React, { useContext, useState } from 'react'
 import { SettingsContext } from '../context/SettingsContext'
 
 const SetPomodoro = () => {
+
     const [newTimer, setNewTimer] = useState({
-        work: 0.2,
-        short: 0.1,
-        long: 0.5,
+        work: 2,
+        short: 1,
+        long: 1,
         active: 'work'
     })
 
-    // const {updateExecute} = useContext(SettingsContext)
+    const {updateExecute} = useContext(SettingsContext)
 
     const handleChange = input => {
         const {name, value} = input.target
@@ -34,12 +35,10 @@ const SetPomodoro = () => {
                 break;
         }
     }
-
     const handleSubmit = e => {
         e.preventDefault()
-        // updateExecute(newTimer) 
+        updateExecute(newTimer)
     }
-
     return (
         <div className="form-container">
             <form noValidate onSubmit={handleSubmit}>

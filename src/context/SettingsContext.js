@@ -22,7 +22,7 @@ function SettingsContextProvider(props) {
     }
     // pause animation fn 
     function pauseTimer() {
-    setStartAnimate(false)
+        setStartAnimate(false)
     }
     // pass time to counter 
     const children = ({ remainingTime }) => {
@@ -60,7 +60,7 @@ function SettingsContextProvider(props) {
         }
     }
 
-    function stopAimate() {
+    function stopAnimate() {
         setStartAnimate(false)
     }
 
@@ -75,7 +75,7 @@ function SettingsContextProvider(props) {
             children,
             SettingsBtn,
             setCurrentTimer,
-            stopAimate
+            stopAnimate,
         }}>
             {props.children}
         </SettingsContext.Provider>
